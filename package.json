@@ -1,0 +1,29 @@
+{
+  "name": "burger-app",
+  "version": "1.0.0",
+  "description": "burger app for full stack bootcamp",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NekoCarreraDesigns/burger-app.git"
+  },
+  "keywords": [
+    "burger",
+    "app",
+    "node",
+    "express",
+    "mysql",
+    "handelbars",
+    "ya",
+    "mama"
+  ],
+  "author": "Neko Carrera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NekoCarreraDesigns/burger-app/issues"
+  },
+  "homepage": "https://github.com/NekoCarreraDesigns/burger-app#readme"
+}

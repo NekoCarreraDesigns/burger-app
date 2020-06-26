@@ -1,4 +1,4 @@
-const connection = require("./config/connection.js");
+const connection = require("../config/connection.js");
 
 printQuetionMarks = (num) => {
     let arr = [];
@@ -24,7 +24,7 @@ objToSql = (ob) => {
 
 let orm = {
     selectAll: function (tableInput, cb) {
-        let queryString = "SELECT * FROM" + tableInput;
+        let queryString = "SELECT * FROM burgers";
         connection.query(queryString, function (err, res) {
             if (err) {
                 throw err;

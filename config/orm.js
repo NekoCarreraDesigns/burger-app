@@ -68,18 +68,4 @@ let orm = {
     }
 };
 
-
-
-
-//methods to use for app
-// selectAll()
-// insertOne()
-// updateOne()
-
-
-
-
-
-
-
 module.exports = orm;

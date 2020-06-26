@@ -1,0 +1,18 @@
+#menu-item {
+    position: absolute;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+}
+#devoured {
+    position: relative;
+    float: right;
+    background-color: dimgrey;
+    text-decoration-line: line-through;
+}
+#burger-time {
+    border-radius: 5px;
+    color: tomato;
+    border: honeydew;
+
+}

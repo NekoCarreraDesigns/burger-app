@@ -45,7 +45,7 @@ let orm = {
 
         connection.query(queryString, vals, function (err, res) {
             if (err) {
-                throw MediaError;
+                throw err;
             }
             cb(res);
         });

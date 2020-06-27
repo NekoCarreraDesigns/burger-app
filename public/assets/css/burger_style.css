@@ -1,8 +1,12 @@
 #menu-item {
+    left: 50%;
+    margin-left: -50px;
+    display: inline-block;
     position: absolute;
     border-radius: 5px;
-    display: block;
-    text-align: center;
+    width: 100px;
+    height: 100px;
+    
 }
 #devoured {
     position: relative;
@@ -10,9 +14,32 @@
     background-color: dimgrey;
     text-decoration-line: line-through;
 }
-#burger-time {
+#devour {
     border-radius: 5px;
     color: tomato;
-    border: honeydew;
+    border: green;
+    left: 40%;
+    margin-left: -40px;
+    position: absolute;
+    display: inline-block;
+}
+#neon {
+    text-align: center;
+    color: green;
+}
+#eat-me {
+    left: 35%;
+    margin-left: 10px;
+    position: absolute;
+    display: inline-block;
+}
+#grill-it-up {
+   display: inline-block;
+   position: absolute;
+   margin-left: -50px;
+   left: 65%;
 
+}
+body {
+    background-image: url("https://images.unsplash.com/photo-1552718752-c682d315b136?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
 }

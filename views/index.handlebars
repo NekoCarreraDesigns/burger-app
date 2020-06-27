@@ -1,16 +1,16 @@
 <h1 id="neon">Eat-Da-Burger</h1>
 
-<ul>
+<ul id="eat-me">
     {{#each burgers}}
     {{#unless devoured}}
     {{> burgers devoured=false}}
     {{/unless}}
     {{/each}}
-    <button id="burger-time">Devour</button>
+
 </ul>
 
 
-<ul id="devoured" class="hide">
+<ul id="devoured">
     {{#each burgers}}
     {{#if devoured}}
     {{> burgers devoured=true}}
@@ -18,11 +18,13 @@
     {{/each}}
 </ul>
 
-<form>
-    <textarea id="menu-item">
 
-Whats on the menu?
+<form>
+    <div id="menu-item">
+        <textarea style="width: 150px; height: 100px;">
+
 
 </textarea>
-    <button id="grill-it-up" type="submit">Submit</button>
+    </div>
+    <button id="grill-it-up" type="submit" name="new-burger">Grill It!</button>
 </form>

@@ -2,7 +2,7 @@ const orm = require("../config/orm.js");
 
 let burger = {
     all: function (cb) {
-        orm.selectAll("burgers", function (res) {
+        orm.selectAll("burgers", (res) => {
             cb(res);
         });
     },
@@ -17,23 +17,6 @@ let burger = {
         });
     }
 };
-
-module.exports = burger;
-
-
-
-
-
-
-
-
-
-
-//orm.selectAll("");
-
-//orm.insertOne("");
-
-//orm.updateOne("");
 
 
 module.exports = burger;

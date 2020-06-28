@@ -1,5 +1,6 @@
 #menu-item {
     left: 50%;
+    margin-top: 200px;
     margin-left: -50px;
     display: inline-block;
     position: absolute;
@@ -14,34 +15,34 @@
     background-color: dimgrey;
     text-decoration-line: line-through;
 }
-#devour {
-    border-radius: 5px;
-    color: tomato;
-    border: green;
-    left: 40%;
-    margin-left: -40px;
-    position: absolute;
-    display: inline-block;
-}
 #neon {
     text-align: center;
-    color: green;
+    color: tomato;
 }
 #eat-me {
+    margin-top: 215px;
     left: 35%;
     margin-left: 10px;
     position: absolute;
     display: inline-block;
+    color: tomato;
 }
 #grill-it-up {
+    border-radius: 5px;
    display: inline-block;
    position: absolute;
    margin-left: -50px;
-   left: 65%;
+   left: 62%;
+   padding: 5px;
+   margin-top: 215px;
 
 }
 body {
     background-image: url("https://images.unsplash.com/photo-1552718752-c682d315b136?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
     
 
+}
+#burger {
+    width: 200px;
+    height: 200px;
 }

@@ -7,26 +7,43 @@ printQuetionMarks = (num) => {
     }
     return arr.toString();
 }
+function objToSql(ob) {
+    let arr = [];
 
+
+    for (var key in ob) {
+        let value = ob[key];
+
+        if (Object.hasOwnProperty.call(ob, key)) {
+
+            if (typeof value === "string" && value.indexOf(" ") >= 0) {
+                value = "'" + value + "'";
+            }
+            arr.push(key + "=" + value);
+        }
+    }
+
+    return arr.toString();
+}
 
 let orm = {
-    selectAll: function (tableInput, cb) {
+    selectAll: function (table, cb) {
         let queryString = "SELECT * FROM burgers";
-        connection.query(queryString, function (err, res) {
+        connection.query(queryString, function (err, data) {
             if (err) {
                 throw err;
             }
-            cb(res);
+            cb(data);
         });
     },
-    insertOne: function (table, cols, vals, cb) {
+    insertOne: function (table, cols, vals, condition, cb) {
         let queryString = "INSERT INTO" + table;
         queryString += "(";
         queryString += cols.toString();
         queryString += ")";
         queryString += "VALUES (";
         queryString += printQuetionMarks(vals.length);
-        queryString += ")";
+        queryString += ")" + ";";
 
         console.log(queryString);
 
@@ -38,7 +55,12 @@ let orm = {
         });
     },
     updateOne: function (table, objColVals, condition, cb) {
-        let queryString = "UPDATE burgers SET devoured WHERE devoured = true"
+        let queryString = "UPDATE" + table
+        queryString += "SET"
+        queryString += objToSql(objColVals)
+        queryString += "WHERE"
+        queryString += condition + ";";
+
 
         console.log(queryString);
         connection.query(queryString, function (err, res) {

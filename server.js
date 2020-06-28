@@ -17,6 +17,6 @@ app.set("view engine", "handlebars");
 app.use(router)
 
 app.listen(PORT, (err, res) => {
-
+    if (err) throw err;
     console.log("Server listening on:" + PORT);
 })

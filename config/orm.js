@@ -8,19 +8,6 @@ printQuetionMarks = (num) => {
     return arr.toString();
 }
 
-objToSql = (ob) => {
-    let arr = [];
-    for (let key in ob) {
-        value = ob[key];
-        if (Object.hasOwnProperty.call(ob, key)) {
-            if (typeof value === "string" && value.indexOf("") >= 0) {
-                value = "'" + value + "'";
-            }
-            arr.push(key + "=" + value);
-        }
-    }
-    return arr.toString();
-}
 
 let orm = {
     selectAll: function (tableInput, cb) {
@@ -51,12 +38,7 @@ let orm = {
         });
     },
     updateOne: function (table, objColVals, condition, cb) {
-        let queryString = "UPDATE" + table;
-
-        queryString += "SET";
-        queryString += objToSql(objColVals);
-        queryString += "WHERE";
-        queryString += condition;
+        let queryString = "UPDATE burgers SET devoured WHERE devoured = true"
 
         console.log(queryString);
         connection.query(queryString, function (err, res) {

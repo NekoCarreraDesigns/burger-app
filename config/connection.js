@@ -13,7 +13,7 @@ connection.connect((err) => {
         console.error("error connecting:" + err.stack);
         return;
     }
-    console.log("connecteed as id" + connection.threadid);
+    console.log("connected as id:" + connection.threadId);
 });
 
 

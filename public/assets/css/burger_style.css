@@ -44,5 +44,9 @@ body {
 }
 #burger {
     width: 200px;
-    height: 200px;
+}
+
+#devour {
+    color: tomato;
+    padding: 10px;    
 }

@@ -11,8 +11,8 @@ router.get("/", (req, res) => {
 });
 
 router.post("/api/burgers/", (req, res) => {
-    burger.create(["burger_name", "devour"], [req.body.burger_name, req.body.devour], (res) => {
-        res.json("index", { id: result.insertId });
+    burger.create(["burgers", "devour"], [req.body.burgers, req.body.devour], (res) => {
+        res.json("index", { id: burgers.insertId });
     });
 });
 

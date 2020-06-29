@@ -6,13 +6,19 @@ const burger = require("../models/burger.js");
 router.get("/", (req, res) => {
     burger.all((data) => {
         console.log(data);
-        res.render("index", { burgers: data });
+        const hbObj = {
+            burger: data
+        }
+        res.render("index", hbObj);
     });
 });
 
-router.post("/api/burgers/", (req, res) => {
-    burger.create(["burgers", "devour"], [req.body.burgers, req.body.devour], (res) => {
-        res.json("index", { id: burgers.insertId });
+router.post("/api/burgers", (req, res) => {
+    console.log(req.body);
+    let cols = ["burger_name", "devoured"]
+    burger.create(cols, [`${req.body.name}`, req.body.devoured], (result) => {
+        console.log(result);
+        res.json({ id: result.insertId })
     });
 });
 

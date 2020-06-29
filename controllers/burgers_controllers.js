@@ -23,18 +23,15 @@ router.post("/api/burgers", (req, res) => {
 });
 
 router.put("/api/burgers/:id", (req, res) => {
+    let eaten = req.body.devoured;
     let condition = "id =" + req.params.id;
 
     console.log("condition", condition);
 
     burger.update({
-        devoured: true
+        devoured: eaten
     }, condition, (result) => {
-        if (result.changedRows === 0) {
-            return res.status(404).end();
-        } else {
-            res.status(200).end();
-        };
+        console.log(result);
     });
 });
 

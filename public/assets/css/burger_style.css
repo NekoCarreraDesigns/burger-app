@@ -21,11 +21,13 @@
 }
 #eat-me {
     margin-top: 215px;
-    left: 35%;
+    
+    font-size: 40px;
+    text-shadow: yellow 10px 10px 10px 10px;
     margin-left: 10px;
-    position: absolute;
+    position: relative;
     display: inline-block;
-    color: tomato;
+    color: orangered;
 }
 #grill-it-up {
     border-radius: 5px;
@@ -49,4 +51,9 @@ body {
 #devour {
     color: tomato;
     padding: 10px;    
+}
+#noob-saibot {
+    text-align: center;
+    color: yellow;
+    font-size: 20px;
 }

@@ -13,7 +13,7 @@ $(function () {
             function () {
                 console.log("Devoured", devour);
                 // Reload the page to get the updated list
-                location.reload();
+                location.reload(true);
             }
         );
     });
@@ -23,7 +23,7 @@ $(function () {
 
         let newBurger = {
             name: $("burgers").val().trim(),
-            devoured: $("devoured=false").val().trim()
+            devoured: false,
         };
 
         // Send the POST request.
@@ -34,7 +34,7 @@ $(function () {
             function () {
                 console.log("created new burger");
                 // Reload the page to get the updated list
-                location.reload();
+                location.reload(true);
             }
         );
     });

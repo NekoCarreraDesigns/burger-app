@@ -57,7 +57,7 @@ let orm = {
     updateOne: function (table, objColVals, condition, cb) {
         let queryString = "UPDATE" + table
         queryString += "SET"
-        queryString += objToSql(objColVals)
+        queryString += objToSql(objColVals).toString();
         queryString += "WHERE"
         queryString += condition + ";";
 
@@ -67,6 +67,7 @@ let orm = {
             if (err) {
                 throw err;
             }
+            console.log(res);
             cb(res)
         });
     }

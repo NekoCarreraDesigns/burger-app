@@ -26,7 +26,7 @@ function objToSql(ob) {
     return arr.toString();
 }
 
-let orm = {
+const orm = {
     selectAll: function (table, cb) {
         let queryString = "SELECT * FROM burgers";
         connection.query(queryString, function (err, data) {

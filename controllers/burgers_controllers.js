@@ -1,7 +1,7 @@
 const express = require("express");
-const router = express.Router();
-
 const burger = require("../models/burger.js");
+
+const router = express.Router();
 
 router.get("/", (req, res) => {
     burger.all((data) => {
@@ -13,20 +13,22 @@ router.get("/", (req, res) => {
 router.post("/api/burgers", (req, res) => {
     console.log(req.body);
     let cols = ["burger_name", "devoured"]
-    burger.create(cols, [`${req.body.name}`, req.body.devoured], (result) => {
+    burger.create(cols, [req.body.name, req.body.devoured], (result) => {
         console.log(result);
+        res.render("index", cols)
         res.json({ id: result.insertId })
     });
 });
 
 router.put("/api/burgers/:id", (req, res) => {
-    let eaten = req.body.devoured;
-    let condition = "id =" + req.params.id;
+    let devoured = req.body.devoured
+    let id = "id =" + req.params.id;
 
 
     burger.update({
-        devoured: eaten
-    }, condition, (result) => {
+        devoured: devoured,
+
+    }, id, (result) => {
         console.log(result);
     });
 });

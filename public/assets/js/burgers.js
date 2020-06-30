@@ -1,41 +1,37 @@
-$(function () {
-    $("#devour").on("click", function (event) {
-        let id = $(this).data("id");
-        let devour = $(this).data("devour");
-
-        let newDevourState = {
-            devoured: devour
-        };
-        $.ajax("/api/burgers/" + id, {
-            type: "PUT",
-            data: newDevourState
-        }).then(
-            function () {
-                console.log("Devoured", devour);
-                // Reload the page to get the updated list
-                location.reload(true);
-            }
-        );
-    });
-    $("#grill-it-up").on("submit", function (event) {
-        // Make sure to preventDefault on a submit event.
-        event.preventDefault();
-
+$(document).ready(function () {
+    $("#grill-it").on("submit", function (e) {
+        e.preventDefault();
         let newBurger = {
-            name: $("burgers").val().trim(),
+            name: $("burger").val().trim(),
             devoured: false,
         };
 
-        // Send the POST request.
-        $.ajax("/api/burgers/", {
+        $.ajax("/api/burgers", {
             type: "POST",
-            data: newBurger
-        }).then(
-            function () {
-                console.log("created new burger");
-                // Reload the page to get the updated list
-                location.reload(true);
-            }
-        );
+            data: newBurger,
+        }).then(function () {
+            console.log("Burger added");
+            location.reload(true);
+        });
+    });
+
+    $("#devour").on("click", function (e) {
+        let id = $(this).data("id");
+        let devour = $(this).data("devour");
+        console.log(id + " " + devour);
+        let newDevoured = {
+            devoured: devour,
+        };
+        $.ajax("/api/burgers/" + id, {
+            type: "PUT",
+            data: newDevoured,
+        })
+            .then(function () {
+                console.log("Burger has been devoured");
+                window.location.reload();
+            })
+            .catch((err) => {
+                console.log(err);
+            });
     });
 });

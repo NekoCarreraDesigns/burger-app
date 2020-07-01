@@ -27,16 +27,16 @@ body {
     width: 200px;
 }
 
-#devour {
+.devour {
     color: tomato;
     padding: 5px;    
 }
-#noob-saibot {
+.noob-saibot {
     text-align: center;
     color: yellow;
     font-size: 20px;
 }
-#grill-it {
+.grill-it {
     color: tomato;
     padding: 5px;
 }

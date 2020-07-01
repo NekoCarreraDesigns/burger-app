@@ -1,4 +1,4 @@
-const connection = require("../config/connection.js");
+const connection = require("./connection.js");
 
 printQuetionMarks = (num) => {
     let arr = [];
@@ -36,16 +36,17 @@ const orm = {
             cb(data);
         });
     },
-    insertOne: function (table, cols, vals, condition, cb) {
-        let queryString = "INSERT INTO" + table;
-        queryString += "(";
+    insertOne: function (table, cols, vals, cb) {
+        let queryString = " INSERT INTO " + table;
+        queryString += " ( ";
         queryString += cols.toString();
-        queryString += ")";
-        queryString += "VALUES (";
+        queryString += " ) ";
+        queryString += " VALUES (";
         queryString += printQuetionMarks(vals.length);
-        queryString += ")" + ";";
+        queryString += " ) ";
 
         console.log(queryString);
+        console.log(vals.length);
 
         connection.query(queryString, vals, function (err, res) {
             if (err) {
@@ -55,14 +56,15 @@ const orm = {
         });
     },
     updateOne: function (table, objColVals, condition, cb) {
-        let queryString = "UPDATE" + table
-        queryString += "SET"
-        queryString += objToSql(objColVals).toString();
-        queryString += "WHERE"
-        queryString += condition + ";";
+        let queryString = " UPDATE " + table
+        queryString += " SET "
+        queryString += objToSql(objColVals)
+        queryString += " WHERE "
+        queryString += condition;
 
 
         console.log(queryString);
+        console.log(objColVals)
         connection.query(queryString, function (err, res) {
             if (err) {
                 throw err;

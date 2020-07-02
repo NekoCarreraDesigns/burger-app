@@ -28,7 +28,7 @@ function objToSql(ob) {
 
 const orm = {
     selectAll: function (table, cb) {
-        let queryString = "SELECT * FROM burgers";
+        let queryString = " SELECT * FROM burgers ";
         connection.query(queryString, function (err, data) {
             if (err) {
                 throw err;
@@ -41,7 +41,7 @@ const orm = {
         queryString += " ( ";
         queryString += cols.toString();
         queryString += " ) ";
-        queryString += " VALUES (";
+        queryString += " VALUES ( ";
         queryString += printQuetionMarks(vals.length);
         queryString += " ) ";
 

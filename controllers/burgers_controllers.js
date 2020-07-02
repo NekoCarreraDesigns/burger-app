@@ -13,7 +13,7 @@ router.get("/burgers", (req, res) => {
     });
 });
 
-router.post("/api/burgers/create", (req, res) => {
+router.post("/burgers/create", (req, res) => {
     console.log(req.body);
     burger.create(req.body.burger_name, (result) => {
         console.log(result);

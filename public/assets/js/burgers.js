@@ -1,20 +1,4 @@
 $(document).ready(function () {
-    $(".grill-it").on("submit", function (e) {
-        e.preventDefault();
-        let newBurger = {
-            name: $("burger").val().trim(),
-
-        };
-        console.log(newBurger);
-        $.ajax("/api/burgers/create", {
-            type: "POST",
-            data: newBurger,
-        }).then(function () {
-            console.log("Burger added");
-            location.reload();
-        });
-    });
-
     $(".devour").on("click", function (e) {
         let id = $(this).data("id");
         let devour = $(this).data("devour");

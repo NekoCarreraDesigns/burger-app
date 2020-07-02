@@ -6,10 +6,8 @@ let burger = {
             cb(res);
         });
     },
-    create: function (cols, vals, cb) {
-        orm.insertOne("burgers", cols, vals, (res) => {
-            cb(res);
-        });
+    create: function (name, cb) {
+        orm.insertOne("burgers", ["burger_name", "devoured"], [name, false], cb)
     },
     update: function (objColVals, condition, cb) {
         orm.updateOne("burgers", objColVals, condition, (res) => {

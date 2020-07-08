@@ -4,11 +4,15 @@ const burger = require("../models/burger.js");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-    burger.all((data) => {
+    burger.all((data, err) => {
+        if (err) {
+            throw err;
+        }
         console.log(data);
         res.render("index", { burgers: data });
 
-    });
+    })
+
 });
 
 router.post("/burgers/create", (req, res) => {

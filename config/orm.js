@@ -1,6 +1,6 @@
 const connection = require("./connection.js");
 
-printQuetionMarks = (num) => {
+function printQuestionMarks(num) {
     let arr = [];
     for (let i = 0; i < num; i++) {
         arr.push("?");
@@ -37,12 +37,12 @@ const orm = {
         });
     },
     insertOne: function (table, cb) {
-        let queryString = " INSERT INTO " + table;
-        queryString += "( ";
+        let queryString = "INSERT INTO " + table;
+        queryString += " (";
         queryString += cols.toString();
         queryString += ") ";
         queryString += "VALUES ( ";
-        queryString += printQuetionMarks(vals.length);
+        queryString += printQuestionMarks(vals.length);
         queryString += ") ";
 
         console.log(queryString);

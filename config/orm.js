@@ -28,7 +28,7 @@ function objToSql(ob) {
 
 const orm = {
     selectAll: function (table, cb) {
-        let queryString = " SELECT * FROM burgers ";
+        let queryString = " SELECT * FROM " + table;
         connection.query(queryString, function (err, data) {
             if (err) {
                 throw err;
@@ -36,14 +36,14 @@ const orm = {
             cb(data);
         });
     },
-    insertOne: function (table, name, cb) {
+    insertOne: function (table, cb) {
         let queryString = " INSERT INTO " + table;
-        queryString += " ( ";
+        queryString += "( ";
         queryString += cols.toString();
-        queryString += " ) ";
-        queryString += " VALUES ( ";
+        queryString += ") ";
+        queryString += "VALUES ( ";
         queryString += printQuetionMarks(vals.length);
-        queryString += " ) ";
+        queryString += ") ";
 
         console.log(queryString);
         console.log(vals.length);

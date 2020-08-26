@@ -1,26 +1,57 @@
-# burger-app
 
-Welcome to the burger app, this app uses expresss handlebars to render html content, it also uses express.js for the backend functionality. it connects to an MySQL database for seed data to be used during testing. the app is used for fun and as an example of the CRUD methodology.
+  # Title: Eat-da-burger
 
-# Installation
+  ![last commit](https://img.shields.io/github/last-commit/NekoCarreraDesigns/burger-app?style=flat-square)![license badge](https://img.shields.io/github/license/NekoCarreraDesigns/burger-app?style=flat-square)
 
-1. clone repo
-2. npm i all packages
-3. link your MySQl db
-4. run the schema and seeds
-5. from the cli run node server.js
+  ### URL: https://whispering-mesa-75471.herokuapp.com/
 
-# Contributors
+  ## Description 
+  
+  Burger app that uses a MySql orm, node, and express
 
-Nicholas C. Maas (Neko Carrera)
+  ## Table of Contents 
+   
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Future Developments](#futureDevelopments)
+  * [Credits](#credits)
+  * [Questions](#questions)
+  
+  ## Installation 
+  ``  clone repo, npm i, node server.js, go to localhost:8080
+  ``  
+  ## Usage 
+  
+  Add burgers and devour them without getting fat
 
-# Technologies Used
+  ## Future Developments
 
-Express.js
-ES6
-Node.js
-MySQL
+  make devoured burgers, clear off the screen
 
-# Bugs, Questions, and Comments
+  ## Credits
 
-contact Nicholas C. Maas at denvernick@hotmail.com
+  * node.js
+
+* [Express.js](https://www.npmjs.com/package/express)
+
+* es6
+
+* [MySQL](https://www.npmjs.com/package/mysql)
+
+  ## Contributors: 
+  
+  Nicholas C. Maas
+
+  ## Questions?
+
+  Contact me at  [denvernick@hotmail.com]
+  
+  or[![Follow on Github] (https://img.shields.io/github/followers/NekoCarreraDesigns?label=Follow&style=social)](http://www.github.com/NekoCarreraDesigns)
+
+  Copyright © 2020 Nicholas C. Maas (http://www.github.com/NekoCarreraDesigns)
+
+  ---
+
+  ##### _Created with [NekoCarreraDesigns readme generator] (https://github.com/NekoCarreraDesigns/readme-generator)
+
+  

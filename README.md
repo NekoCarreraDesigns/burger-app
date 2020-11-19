@@ -1,57 +1,57 @@
+# Title: Eat-da-burger
 
-  # Title: Eat-da-burger
+![last commit](https://img.shields.io/github/last-commit/NekoCarreraDesigns/burger-app?style=flat-square)![license badge](https://img.shields.io/github/license/NekoCarreraDesigns/burger-app?style=flat-square)
 
-  ![last commit](https://img.shields.io/github/last-commit/NekoCarreraDesigns/burger-app?style=flat-square)![license badge](https://img.shields.io/github/license/NekoCarreraDesigns/burger-app?style=flat-square)
+### URL: https://whispering-mesa-75471.herokuapp.com/
 
-  ### URL: https://whispering-mesa-75471.herokuapp.com/
+![](public/assets/img/2020-11-18.png)
 
-  ## Description 
-  
-  Burger app that uses a MySql orm, node, and express
+## Description
 
-  ## Table of Contents 
-   
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [Future Developments](#futureDevelopments)
-  * [Credits](#credits)
-  * [Questions](#questions)
-  
-  ## Installation 
-  ``  clone repo, npm i, node server.js, go to localhost:8080
-  ``  
-  ## Usage 
-  
-  Add burgers and devour them without getting fat
+Burger app that uses a MySql orm, node, and express
 
-  ## Future Developments
+## Table of Contents
 
-  make devoured burgers, clear off the screen
+- [Installation](#installation)
+- [Usage](#usage)
+- [Future Developments](#futureDevelopments)
+- [Credits](#credits)
+- [Questions](#questions)
 
-  ## Credits
+## Installation
 
-  * node.js
+` clone repo, npm i, node server.js, go to localhost:8080 `
 
-* [Express.js](https://www.npmjs.com/package/express)
+## Usage
 
-* es6
+Add burgers and devour them without getting fat
 
-* [MySQL](https://www.npmjs.com/package/mysql)
+## Future Developments
 
-  ## Contributors: 
-  
+make devoured burgers, clear off the screen
+
+## Credits
+
+- node.js
+
+- [Express.js](https://www.npmjs.com/package/express)
+
+- es6
+
+- [MySQL](https://www.npmjs.com/package/mysql)
+
+  ## Contributors:
+
   Nicholas C. Maas
 
   ## Questions?
 
-  Contact me at  [denvernick@hotmail.com]
-  
+  Contact me at [denvernick@hotmail.com]
+
   or[![Follow on Github] (https://img.shields.io/github/followers/NekoCarreraDesigns?label=Follow&style=social)](http://www.github.com/NekoCarreraDesigns)
 
   Copyright © 2020 Nicholas C. Maas (http://www.github.com/NekoCarreraDesigns)
 
-  ---
+  ***
 
-  ##### _Created with [NekoCarreraDesigns readme generator] (https://github.com/NekoCarreraDesigns/readme-generator)
-
-  
+  ##### \_Created with [NekoCarreraDesigns readme generator] (https://github.com/NekoCarreraDesigns/readme-generator)
